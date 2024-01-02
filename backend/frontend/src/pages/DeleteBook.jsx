@@ -11,7 +11,7 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     setLoading(true)
-    axios.delete(`https://book-store-api-liart.vercel.app/books/${id}`)
+    axios.delete(`${window.location.origin}/books/${id}`)
       .then(() => {
         setLoading(false)
         navigate('/')

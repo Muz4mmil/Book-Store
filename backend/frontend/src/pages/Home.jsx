@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true)
     axios
-      .get('https://book-store-api-liart.vercel.app/books')
+      .get('${window.location.origin}/books')
       .then((response)=>{
         setBooks(response.data.data)
         setLoading(false)

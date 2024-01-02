@@ -14,7 +14,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://book-store-api-liart.vercel.app/books/${id}`)
+    axios.get(`${window.location.origin}/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
@@ -35,7 +35,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`https://book-store-api-liart.vercel.app/books/${id}`, data)
+      .put(`${window.location.origin}/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/');
