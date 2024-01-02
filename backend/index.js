@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 import { Book } from './model/bookModel.js';
 import booksRoute from './routes/booksRoute.js'
 import cors from 'cors'
+import path from 'path'
+
 
 const app = express();
 
@@ -22,6 +24,12 @@ app.get("/", (req, res)=>{
 })
 
 app.use('/books', booksRoute)
+
+
+app.get("/", (req, res) => {
+app.use(express.static(path.resolve(__dirname, "frontend", "build")));
+res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+});
 
 mongoose
     .connect(mongoDbURL)
