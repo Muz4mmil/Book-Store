@@ -9,13 +9,13 @@ const app = express();
 
 app.use(express.json())
 const corsOptions = {
-    origin: 'https://book-store-ten-opal.vercel.app',
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
   };
   
-  app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.get("/", (req, res)=>{
     return res.status(234).send("<div>Hello MERN</div>")
