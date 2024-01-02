@@ -32,10 +32,10 @@ res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
 mongoose
-    .connect(mongoDbURL)
+    .connect('mongodb+srv://root:root@book-project-mern.wfrnhsh.mongodb.net/books-collection?retryWrites=true&w=majority')
     .then(()=>{
         console.log("Connected to DB");
-        app.listen(PORT, ()=>{
+        app.listen(5555, ()=>{
             console.log("Running");
         })
     })
