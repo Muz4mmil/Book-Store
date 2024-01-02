@@ -8,7 +8,12 @@ import cors from 'cors'
 const app = express();
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://book-store-ten-opal.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  }))
 
 app.get("/", (req, res)=>{
     return res.status(234).send("<div>Hello MERN</div>")
