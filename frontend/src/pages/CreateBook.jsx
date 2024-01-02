@@ -19,7 +19,7 @@ const CreateBook = () => {
     };
     setLoading(true)
 
-    axios.post('http://localhost:5555/books', data)
+    axios.post('https://book-store-api-liart.vercel.app/books', data)
       .then(() => {
         setLoading(false);
         navigate('/')
