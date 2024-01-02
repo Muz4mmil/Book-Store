@@ -5,7 +5,7 @@
         "runtime": "vercel-node@3.1.0",
         "environment": {
           "MONGO_DB_URL": "mongodb+srv://root:root@book-project-mern.wfrnhsh.mongodb.net/books-collection?retryWrites=true&w=majority",
-          "PORT": 5555 
+          "PORT": "5555" 
         }
       }
     },
@@ -18,7 +18,7 @@
     ],
     "env": {
       "MONGO_DB_URL": "mongodb+srv://root:root@book-project-mern.wfrnhsh.mongodb.net/books-collection?retryWrites=true&w=majority", 
-      "PORT": 5555 
+      "PORT": "5555" 
     }
   }
   
