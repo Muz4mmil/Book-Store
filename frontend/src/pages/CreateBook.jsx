@@ -19,7 +19,7 @@ const CreateBook = () => {
     };
     setLoading(true)
 
-    axios.post('${window.location.origin}/books', data)
+    axios.post('http://localhost:5555/books', data)
       .then(() => {
         setLoading(false);
         navigate('/')

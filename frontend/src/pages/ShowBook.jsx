@@ -11,7 +11,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`${window.location.origin}/books/${id}`)
+    axios.get(`http://localhost:5555/books/${id}`)
       .then((respose) => {
         setBook(respose.data);
         setLoading(false)

@@ -11,7 +11,7 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     setLoading(true)
-    axios.delete(`${window.location.origin}/books/${id}`)
+    axios.delete(`http://localhost:5555/books/${id}`)
       .then(() => {
         setLoading(false)
         navigate('/')
